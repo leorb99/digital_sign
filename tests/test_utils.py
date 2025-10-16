@@ -1,25 +1,17 @@
 import pytest
-from src.utils import mdc
+from src.utils import mod_inv
+from src.utils import mod_pow
 
-def test_mdc_com_valores_basicos():
-    assert mdc(10, 5) == 5
-    assert mdc(12, 8) == 4
-    assert mdc(100, 25) == 25
-    assert mdc(81, 27) == 27
+def test_mod_inv():
+    assert mod_inv(3, 11) == (4, 1)
+    assert mod_inv(7, 26) == (15, 1)
+    assert mod_inv(7, 160) == (23, 1)
+    assert mod_inv(17, 3120) == (2753, 1)
+    assert mod_inv(2, 4) == (None, None)
 
-def test_mdc_com_numeros_primos():
-    assert mdc(13, 7) == 1
-    assert mdc(17, 29) == 1
-
-def test_mdc_com_zero():
-    assert mdc(0, 5) == 5
-    assert mdc(5, 0) == 5
-    assert mdc(0, 0) == 0
-
-def test_mdc_com_numeros_iguais():
-    assert mdc(9, 9) == 9
-    assert mdc(100, 100) == 100
-
-def test_mdc_ordem_dos_parametros():
-    assert mdc(8, 12) == 4
-    assert mdc(12, 8) == 4
+def test_mod_pow():
+    assert mod_pow(2, 5, 13) == 6
+    assert mod_pow(3, 13, 17) == 12
+    assert mod_pow(7, 23, 187) == 46
+    assert mod_pow(4, 0, 9) == 1
+    assert mod_pow(10, 1, 6) == 4

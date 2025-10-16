@@ -1,8 +1,3 @@
-def mdc(a: int, b: int) -> int:
-    if b == 0:
-        return a
-    return mdc(b, a % b)
-
 def mod_inv(a: int, b: int):
     #https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
     gcd, r, alpha, s, beta, t = a, b, 1, 0, 0, 1
@@ -12,5 +7,15 @@ def mod_inv(a: int, b: int):
         gcd, r = r, gcd - q * r
         alpha, s = s, alpha - q * s
         beta, t = t, beta - q * t
-    return alpha, beta, gcd, t, s
+    if gcd != 1:
+        return None, None
+    return alpha % b, gcd
 
+def mod_pow(base: int, exp: int, mod: int) -> int:
+    #https://en.wikipedia.org/wiki/Modular_exponentiation
+    if mod == 1:
+        return 0
+    c = 1
+    for _ in range(exp):
+        c = (c * base) % mod
+    return c
