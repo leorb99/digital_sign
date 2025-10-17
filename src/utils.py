@@ -8,7 +8,7 @@ def mod_inv(a: int, b: int):
         alpha, s = s, alpha - q * s
         beta, t = t, beta - q * t
     if gcd != 1:
-        return None, None
+        raise ValueError("E e Z devem ser coprimos.")
     return alpha % b, gcd
 
 def mod_pow(base: int, exp: int, mod: int) -> int:
