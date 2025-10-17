@@ -15,11 +15,5 @@ try:
 except FileNotFoundError:
     m = input
 
-m = int.from_bytes(m.encode('utf-8'), byteorder='big') % (31*29)
-print(m)
-c = crip(m)
-print(c)
-
-m = decrip(c)
-print(c)
-print(m)
+# TODO integrar o SHA para gerar o resumo do input
+# TODO passar o resumo para a função crip do RSA

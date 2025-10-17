@@ -1,4 +1,4 @@
-def mod_inv(a: int, b: int):
+def mod_inv(a: int, b: int) -> int:
     #https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
     gcd, r, alpha, s, beta, t = a, b, 1, 0, 0, 1
 
@@ -9,7 +9,7 @@ def mod_inv(a: int, b: int):
         beta, t = t, beta - q * t
     if gcd != 1:
         raise ValueError("E e Z devem ser coprimos.")
-    return alpha % b, gcd
+    return alpha % b
 
 def mod_pow(base: int, exp: int, mod: int) -> int:
     #https://en.wikipedia.org/wiki/Modular_exponentiation
