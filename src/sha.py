@@ -44,7 +44,8 @@ def process_block(buffer: list, h: list):
     h[1] = (h[1] + b) % 2**32
     h[2] = (h[2] + c) % 2**32
     h[3] = (h[3] + d) % 2**32
-    return hex(h[0]) + hex(h[1])[2:] + hex(h[2])[2:] + hex(h[3])[2:]
+    H = h[0] ^ h[1] ^ h[2] ^ h[3]
+    return hex(H)
 
 def sha(m: str):
     h = [h0, h1, h2, h3]
