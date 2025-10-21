@@ -35,15 +35,15 @@ def process_block(buffer: list, h: list):
     w = converter_bytes_para_palavras(buffer)
     for i in range(16):
         f = (b & c) | ((~b) & d)
-        temp = (rote(a, 5) + f + d + w[i]) % 2**16
+        temp = (rote(a, 5) + f + d + w[i]) % 2**32
         d = c
         c = b
         b = a
         a = temp
-    h[0] = (h[0] + a) % 2**16
-    h[1] = (h[1] + b) % 2**16
-    h[2] = (h[2] + c) % 2**16
-    h[3] = (h[3] + d) % 2**16
+    h[0] = (h[0] + a) % 2**32
+    h[1] = (h[1] + b) % 2**32
+    h[2] = (h[2] + c) % 2**32
+    h[3] = (h[3] + d) % 2**32
     return hex(h[0]) + hex(h[1])[2:] + hex(h[2])[2:] + hex(h[3])[2:]
 
 def sha(m: str):
@@ -76,7 +76,7 @@ def sha(m: str):
     buffer[63] = 0x40
     return process_block(buffer, h) 
 
-print(sha('ooiasg'))
+print(sha('ooo'))
 
 html = '''
 <body data-theme="light" class="legacyBackground" data-react-helmet="data-theme,class" style="visibility: visible;">
