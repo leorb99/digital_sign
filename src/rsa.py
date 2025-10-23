@@ -1,7 +1,7 @@
 from src.utils import mod_inv, mod_pow
 
-P = 65539
-Q = 65537
+P = 257
+Q = 263
 N = P * Q
 Z = (P - 1) * (Q - 1)
 E = 523

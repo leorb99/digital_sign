@@ -1,0 +1,26 @@
+Trabalho I – Equivalente a Prova 2 (P2)
+O presente trabalho tem como objetivo o estudo prático e implementação de versões
+simplificadas do RSA (exercício 1 do trabalho prático da semana 6) e do SHA, para aplicá-los
+em um programa de assinatura digital. Além da implementação desses algoritmos, vocês
+deverão desenvolver todo o restante do código necessário para um assinador digital capaz de
+assinar documentos e validar assinaturas.
+O trabalho deve ser feito individualmente e entregue até o dia 09/11/2025 na plataforma
+Aprender3. Vocês devem entregar os seguintes itens:
+Código completo do trabalho (4,5 pontos);
+Instruções para compilar e executar o programa (1,0 ponto);
+Relatório (máx. 5 páginas) contendo: (4,5 pontos);
+o Uma descrição completa da solução;
+o Uma explicação detalhada do RSA e como vocês implementaram o algoritmo;
+o Uma explicação detalhada do SHA e como vocês implementaram o algoritmo;
+o Relatar as principais dificuldades e como vocês conseguiram contorná-las;
+Notem: Não será aceito links para repositórios públicos! Todos os arquivos deverão ser
+entregues até a data estipulada na plataforma Aprender3.
+O uso de ferramentas de Inteligência Artificial (IA) para a geração de código ou de
+partes do relatório não é permitido, a menos que o aluno compreenda plenamente e seja capaz
+de explicar detalhadamente cada trecho do conteúdo produzido. Qualquer indício de uso
+indevido de IA, cópia de código pronto ou plágio resultará em penalização na nota final.
+O relatório deve refletir o entendimento individual do aluno, apresentando um texto
+bem escrito, bem formatado e tecnicamente consistente. Além disso, é proibido o uso de
+bibliotecas criptográficas de terceiros para geração ou gerenciamento de chaves, criptografia
+ou cálculo de funções hash. Todas as implementações devem ser realizadas manualmente, a
+fim de garantir o aprendizado efetivo dos princípios de segurança computacional.
