@@ -15,7 +15,7 @@ src/
 ├── validator.py/
 ```
 ### Execução
-```python -m src.main```
+Na pasta do projeto use  ```python -m src.main``` para executar o programa.
 
 ### Descrição
 + O SHA simplificado gera um resumo de 16 bits da mensagem.
