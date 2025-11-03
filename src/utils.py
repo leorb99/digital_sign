@@ -13,12 +13,16 @@ def mod_inv(a: int, b: int) -> int:
 
 def mod_pow(base: int, exp: int, mod: int) -> int:
     #https://en.wikipedia.org/wiki/Modular_exponentiation
-    if mod == 1:
-        return 0
-    c = 1
-    for _ in range(exp):
-        c = (c * base) % mod
-    return c
+    r = 1  
+    base %= mod  
+    
+    while exp > 0:
+        if exp % 2 == 1:  
+            r = (r * base) % mod
+        base = (base * base) % mod  
+        exp //= 2  
+    
+    return r
 
 def rotate_left(n: int, bits: int) -> int:
     bits %= 32

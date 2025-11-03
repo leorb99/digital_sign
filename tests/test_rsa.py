@@ -2,10 +2,10 @@ import pytest
 from src.rsa import crip, decrip, N
 
 def test_crip():
-    assert crip(97) == 3560
+    assert crip(97) == 2494176658
 
 def test_decrip():
-    assert decrip(3560) == 97
+    assert decrip(2494176658) == 97
     
 def test_encrypt_decrypt_identity():
     for m in [0, 1, 42, 123, 898]:

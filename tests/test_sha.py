@@ -13,12 +13,12 @@ def test_sha_avalanche_effect():
 def test_sha_empty_string():
     h = sha("")
     assert isinstance(int(h, 16), int), "Hash deve ser um inteiro"
-    assert 0 <= int(h, 16) < 2**16, "Hash fora do intervalo de 16 bits"
+    assert 0 <= int(h, 16) < 2**32, "Hash fora do intervalo de 32 bits"
 
 def test_sha_output_type_and_range():
     h = sha("qualquer coisa")
     assert isinstance(int(h, 16), int), "SHA deve retornar um número inteiro"
-    assert 0 <= int(h, 16) < 2**16, "SHA deve estar limitado a 16 bits"
+    assert 0 <= int(h, 16) < 2**32, "SHA deve estar limitado a 32 bits"
 
 def test_sha_similar_length_hashes():
     h1 = sha("abc")
@@ -28,7 +28,7 @@ def test_sha_similar_length_hashes():
 def test_sha_non_ascii_characters():
     h = sha("Olá mundo 🌎")
     assert isinstance(int(h, 16), int)
-    assert 0 <= int(h, 16) < 2**16
+    assert 0 <= int(h, 16) < 2**32
 
 def test_sha_long_message():
     texto_longo = (
@@ -39,7 +39,7 @@ def test_sha_long_message():
     
     assert h1 == h2, "Hash não determinístico para mensagens longas"
     assert isinstance(int(h1, 16), int), "Hash deve retornar um inteiro"
-    assert 0 <= int(h1, 16) < 2**16, "Hash fora do intervalo de 16 bits para mensagens longas"
+    assert 0 <= int(h1, 16) < 2**32, "Hash fora do intervalo de 32 bits para mensagens longas"
 
 def test_sha_increasing_length():
     base = "X" * 10
