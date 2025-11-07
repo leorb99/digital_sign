@@ -27,8 +27,8 @@ Na pasta do projeto use  ```python -m src.main``` para executar o programa.
 As chaves RSA são definidas estaticamente (hard coded) para fins didáticos, garantindo resultados reprodutíveis. 
 
 ### Funcionamento
-![Funcioamento com entrada sendo plain text](image.png)
+![Funcioamento com entrada sendo plain text](imgs/image.png)
 
-![Funcionameto com entrada sendo um arquivo de texto](<Screenshot from 2025-11-07 13-31-27.png>)
+![Funcionameto com entrada sendo um arquivo de texto](<imgs/image-2.png>)
 
-![Funcionamento para uma assinatura inválida](image-1.png)
+![Funcionamento para uma assinatura inválida](imgs/image-1.png)
